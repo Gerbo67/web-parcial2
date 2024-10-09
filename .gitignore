@@ -1,0 +1,21 @@
+# Ignorar todo dentro de la carpeta build
+build/*
+
+# No ignorar las carpetas específicas
+!build/assets/
+!build/plugins/
+!build/views/
+
+# Dependencias de Node.js
+node_modules
+
+# Editor de proyectos
+.idea/
+.vscode/
+.vs/
+
+# Archivos de lock
+package-lock.json
+
+# Archivos enviroment
+.env
