@@ -65,7 +65,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
     DB_USER=tu-user
     DB_NAME=tu-bdname
     DB_PASSWORD=tu-contraseña
-    DB_SERVER=tu-server
+    DB_SERVER=localhost
     ```
 
 5. **Compilar el proyecto**:
