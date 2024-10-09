@@ -39,7 +39,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
 1. **Clonar el repositorio y abrir el proyecto**:
 
     ```bash
-    git clone https://github.com/tuusuario/tu-repositorio.git
+    git clone https://github.com/Gerbo67/web-parcial2.git
     ```
 
    Una vez clonado, abre el proyecto con el Editor de código preferido (Visual Studio Code o WebStorm).
