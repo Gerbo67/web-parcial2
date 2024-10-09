@@ -44,18 +44,25 @@ VALUES ('Cheetos', 'Sabritas', 150, 1, 500),
        ('Barcel', 'Barcel', 170, 1, 450),
        ('XX Lager', 'Cuauhtémoc Moctezuma', 220, 3, 2);
 
+-- Usar dbo master
+USE master;
 
--- Paso 1: Crear el login en el servidor
+-- Crear el login
 CREATE LOGIN UserTest
     WITH PASSWORD = 'password1234$';
 
-CREATE USER UserTest
-    FOR LOGIN UserTest;
+-- Usar la base de datos
+USE TiendaPruebas;
 
-ALTER ROLE db_datareader
-    ADD MEMBER UserTest;
+-- Crear el usuario a partir del login
+CREATE USER UserTest FOR LOGIN UserTest;
 
-ALTER ROLE db_datawriter
-    ADD MEMBER UserTest;
+-- Asignar roles de lectura y escritura dentro de la base de datos
+ALTER ROLE db_datareader ADD MEMBER UserTest;
+ALTER ROLE db_datawriter ADD MEMBER UserTest;
 
+-- Otorgar permisos específicos en el esquema dbo
 GRANT DELETE, UPDATE ON SCHEMA :: dbo TO UserTest;
+
+-- Otorgar permisos específicos en la base de datos
+GRANT SELECT, INSERT, UPDATE, DELETE ON DATABASE :: TiendaPruebas TO UserTest;

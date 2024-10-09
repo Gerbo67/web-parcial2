@@ -50,7 +50,8 @@ class ServerExpress {
         this.app.set('view engine', 'handlebars');
         this.app.set('views', [
             path.join(__dirname, 'views'),
-            path.join(__dirname, 'views', 'products') // Añade esta línea
+            path.join(__dirname, 'views', 'products')
+            // Agregar carpetas nuevas creadas en view...
         ]);
 
         // Servir archivos estáticos, incluyendo Bootstrap
